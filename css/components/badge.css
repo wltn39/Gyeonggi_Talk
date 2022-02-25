@@ -1,0 +1,14 @@
+.badge {
+  background-color: tomato;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  display: flex;
+  /* inline에는 크기 적용이 안되니 block 적용 */
+  /* block을 적용하면 정렬이 안되니 flex를 적용 */
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}

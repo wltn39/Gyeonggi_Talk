@@ -1,0 +1,24 @@
+.settings__setting {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings__setting i {
+  opacity: 0.8;
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.settings__setting-column {
+  margin-right: 20px;
+}
+
+.settings__setting-column p {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-top: 5px;
+}

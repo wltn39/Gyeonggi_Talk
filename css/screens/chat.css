@@ -1,0 +1,210 @@
+#chat-screen {
+  background-color: hsl(205, 29%, 75%);
+  /* height: 300vh; */
+}
+
+/* 중앙으로 맞추는 코드 (이미 중앙정렬해놔서 적용하면 꼬임) */
+/* #chat-screen .alt-header,
+#chat-screen .status-bar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+} */
+
+/* 
+상단 메뉴 고정 상태에서 레이어 조정 (z-index)
+#chat-screen .sttus-bar {
+  z-index: 2;
+} */
+
+#chat-screen .alt-header {
+  top: 10px;
+  /* z-index: 1; */
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.main-chat {
+  /* margin-top: 200px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-row--own .message-row__content {
+  animation: fadeIn 1s linear;
+}
+
+#chat-screen > main > div:nth-child(4) > div > div > span.message__bubble {
+  animation: fadeIn 2s linear;
+}
+
+#chat-screen > main > div:nth-child(5) > div > div > span.message__bubble {
+  animation: fadeIn 3s linear;
+}
+
+#chat-screen > main > div:nth-child(6) > div > div > span.message__bubble {
+  animation: fadeIn 4s linear;
+}
+
+.chat__timestamp {
+  background-color: #92a4b2;
+  padding: 10px 25px;
+  color: whitesmoke;
+  border-radius: 15px;
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message__author {
+  margin-bottom: 5px;
+  display: block;
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 96.5%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px 10px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  height: 30px;
+  padding-left: 12px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -10px;
+  top: 2px;
+}
+
+.reply__column:last-child > i {
+  right: 30px;
+  top: 8.5px;
+  right: 30px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply .fa-smile,
+.reply .reply__column:first-child,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 88vw;
+  transform: translateX(-10%);
+  /* transform: translateY(-80px); */
+}
+
+/* .reply:focus-within {
+  transform: translateY(80px);
+} */

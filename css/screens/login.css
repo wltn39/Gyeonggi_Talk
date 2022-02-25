@@ -1,0 +1,65 @@
+
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+}
+
+.welcome-header__title {
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+.welcome-header__text{
+  width: 60%;
+  opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  padding: 15px 0px;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0,0,0,0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+/* corsor를 댈 때 모양이 표시되는 기능 */
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none; 
+  color: inherit;
+    /* inherit는 상위 태그로 부터 색을 물려받음 (여기선 #login-form) */
+  padding: 15px 0px;
+}
+

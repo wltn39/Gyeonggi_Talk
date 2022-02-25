@@ -1,0 +1,66 @@
+.nav {
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  /* box가 border 넘어가지 못하도록  */
+}
+
+.nav__link {
+  color: #424744;
+  position: relative;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(90deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  animation: notificationAnimation 1.5s ease-in-out infinite;
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.nav__btn {
+  animation: appearBtnAnimation 0.5s ease-in-out;
+}
+
+.nav__btn:nth-child(2) {
+  animation: appearBtnAnimation 1s;
+}
+
+.nav__btn:nth-child(3) {
+  animation: appearBtnAnimation 1.5s;
+}
+
+.nav__btn:last-child {
+  animation: appearBtnAnimation 2s;
+}

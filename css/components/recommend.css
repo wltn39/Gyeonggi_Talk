@@ -1,0 +1,19 @@
+.recommend {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 15px 0px;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+}
+
+.recommend__title {
+  font-size: 15px;
+  color: var(--gray-font);
+}
+
+.recommend span {
+  margin: 60px 0;
+  display: block;
+  text-align: center;
+  color: var(--gray-font);
+}
